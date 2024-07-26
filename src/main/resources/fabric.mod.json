@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "toaster",
+	"version": "${version}",
+	"name": "toaster",
+	"description": "Toaster adds the /toaster command, which adds custom system toast messages to the game.",
+	"authors": [
+		"VDPineapple"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "https://github.com/VDPineapple/toaster"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/toaster/head.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.vdpineapple.toaster.Toaster"
+		],
+		"client": [
+			"com.vdpineapple.toaster.ToasterClient"
+		]
+	},
+	"mixins": [
+		"toaster.mixins.json",
+		{
+			"config": "toaster.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "*",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
